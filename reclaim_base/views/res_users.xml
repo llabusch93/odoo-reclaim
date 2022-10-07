@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record
+            id="reclaim_connection_user"
+            model="ir.ui.view">
+        <field name="name">Reclaim.ai Connector Configuration</field>
+        <field name="model">res.users</field>
+        <field
+                name="inherit_id"
+                ref="base.view_users_form_simple_modif"/>
+        <field
+                name="arch"
+                type="xml">
+
+            <xpath
+                    expr="//notebook/page[@name='preferences_page']"
+                    position="after">
+
+                <page
+                        name="reclaim_page"
+                        string="Reclaim.ai Connector">
+                    <group>
+                        <field name="reclaim_token"/>
+                        <field
+                                name="reclaim_state"
+                                class="h3"
+                                decoration-danger="reclaim_state == 'connection_failed'"
+                                decoration-success="reclaim_state == 'connection_success'"/>
+                    </group>
+                </page>
+
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -6,6 +6,6 @@
     "category": "Productivity",
     "version": "15.0.0.1",
     "depends": ["web"],
-    "data": [],
-    "external_dependencies": {"python": ["reclaim_sdk"]},
+    "data": ["views/res_users.xml"],
+    "external_dependencies": {"python": ["reclaim-sdk"]},
 }
